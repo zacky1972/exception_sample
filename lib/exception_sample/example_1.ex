@@ -23,6 +23,20 @@ defmodule ExceptionSample.Example1 do
     IO.puts("4 / 0 = #{value()}")
   end
 
+  # call first time
+
+  def start_link() do
+    GenServer.start_link(__MODULE__, 0, name: __MODULE__)
+  end
+
+  # division
+
+  def my_div(x, y) do
+    div(x, y) # x / y
+  end
+
+  # code
+
   def value() do
     GenServer.call(__MODULE__, :value)
   end
@@ -45,10 +59,6 @@ defmodule ExceptionSample.Example1 do
 
   def div(value) do
     GenServer.cast(__MODULE__, {:div, value})
-  end
-
-  def start_link() do
-    GenServer.start_link(__MODULE__, 0, name: __MODULE__)
   end
 
   @impl true
@@ -83,6 +93,6 @@ defmodule ExceptionSample.Example1 do
 
   @impl true
   def handle_cast({:div, value}, acc) do
-    {:noreply, div(acc, value)}
+    {:noreply, my_div(acc, value)}
   end
 end
