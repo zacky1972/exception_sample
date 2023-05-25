@@ -1,18 +1,8 @@
 defmodule ExceptionSample do
   @moduledoc """
-  Documentation for `ExceptionSample`.
+  This program code in Elixir is a sample handling an arithmetic error,
+  which is caused by division by zero, by three methods:
+  (1) without any handling, (2) by try and rescue, and
+  (3) by Supervisor.
   """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> ExceptionSample.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
 end

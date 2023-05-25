@@ -5,7 +5,7 @@ defmodule ExceptionSample.MixProject do
     [
       app: :exception_sample,
       version: "0.1.0",
-      elixir: "~> 1.14",
+      elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -14,7 +14,8 @@ defmodule ExceptionSample.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      extra_applications: [:logger]
+      extra_applications: [:logger],
+      mod: {ExceptionSample.Application, []}
     ]
   end
 
