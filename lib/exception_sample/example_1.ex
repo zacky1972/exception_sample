@@ -32,7 +32,8 @@ defmodule ExceptionSample.Example1 do
   # division
 
   def my_div(x, y) do
-    div(x, y) # x / y
+    # x / y
+    div(x, y)
   end
 
   # code
