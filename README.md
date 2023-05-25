@@ -1,23 +1,6 @@
 # ExceptionSample
 
-**TODO: Add description**
-
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `exception_sample` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:exception_sample, "~> 0.1.0"}
-  ]
-end
-```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/exception_sample>.
+This program code in Elixir is a sample handling an arithmetic error, which is caused by division by zero, by three methods: (1) without any handling, (2) by try rescue (catch), and (3) by Supervisor.
 
 ## License
 
