@@ -1,6 +1,6 @@
-defmodule ExceptionSample.Example1 do
+defmodule ExceptionSample.Example3 do
   @moduledoc """
-  Example 1: without any handling.
+  Example 3: handling an arithmetic error by Supervisor.
   """
 
   use GenServer
@@ -23,9 +23,9 @@ defmodule ExceptionSample.Example1 do
     IO.puts("4 / 0 = #{value()}")
   end
 
-  # call start_link at first time
+  # You don't need to call it.
 
-  def start_link() do
+  def start_link(_) do
     GenServer.start_link(__MODULE__, 0, name: __MODULE__)
   end
 

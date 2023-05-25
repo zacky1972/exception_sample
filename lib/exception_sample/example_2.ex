@@ -23,7 +23,7 @@ defmodule ExceptionSample.Example2 do
     IO.puts("4 / 0 = #{value()}")
   end
 
-  # call first time
+  # call start_link at first time
 
   def start_link() do
     GenServer.start_link(__MODULE__, 0, name: __MODULE__)

@@ -10,6 +10,7 @@ defmodule ExceptionSample.Application do
     children = [
       # Starts a worker by calling: ExceptionSample.Worker.start_link(arg)
       # {ExceptionSample.Worker, arg}
+      ExceptionSample.Example3
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
